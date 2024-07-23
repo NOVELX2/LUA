@@ -4,7 +4,7 @@ local toggleButton = frame:WaitForChild("TextButton")
 local autoClicking = false
 local clickInterval = 0.1  -- ความถี่ในการคลิก (วินาที)
 
--- ฟังก์ชันสำหรับเริ่มการคลิกอัตโนมัติ
+--start
 local function startAutoClick()
     while autoClicking do
         local virtualUser = game:GetService("VirtualUser")
@@ -15,7 +15,7 @@ local function startAutoClick()
     end
 end
 
--- ฟังก์ชันสำหรับเปิด/ปิด Auto Click
+-- on/off Auto Click
 local function toggleAutoClick()
     autoClicking = not autoClicking
     if autoClicking then
@@ -28,5 +28,5 @@ end
 
 toggleButton.MouseButton1Click:Connect(toggleAutoClick)
 
--- ตั้งค่าเริ่มต้น
+-- default settings
 toggleButton.Text = "Start Auto Click"
